@@ -1,0 +1,227 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif; /* Stylish and creative font */
+}
+
+body {
+    background: linear-gradient(to bottom right, #8e44ad, #3498db);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Main Container Styling */
+.container {
+    width: 100%;
+    max-width: 1400px; /* Wider container */
+    height: 570px; /* Automatically adjust height */
+    background: linear-gradient(145deg, #ffffff, #f3f8fe);
+    border: 3px solid #6c5ce7; /* Bold purple border */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 25px 60px; /* Reduced padding */
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    font-weight: bold; /* Make all text bolder */
+}
+
+.container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    border-color: #4a00e0;
+}
+
+/* Search Box Styling */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.input-container input {
+    width: 65%;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #6c5ce7;
+    border-radius: 12px;
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    font-family: 'Roboto Slab', serif;
+}
+
+.input-container input:focus {
+    border-color: #4a00e0;
+    box-shadow: 0 0 12px rgba(108, 92, 231, 0.8);
+}
+
+.input-container .search-icon {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.input-container .search-icon img {
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.input-container .search-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Weather Details Styling */
+.image {
+    margin: 15px 0;
+}
+
+.image img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    animation: fadeIn 1s ease;
+}
+
+.temp {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #6c5ce7;
+    margin: 10px 0;
+}
+
+.location {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #2d3436;
+    margin: 8px 0;
+}
+
+.country {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #636e72;
+    margin-bottom: 15px;
+}
+
+.cord {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin-top: 10px;
+    padding: 0 40px;
+}
+
+/* Data Container */
+.data-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.element {
+    display: inline-block;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #a29bfe, #81ecec);
+    border-radius: 19px;
+    padding: 15px 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background 0.3s ease;
+
+}
+
+.element:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #6c5ce7, #74b9ff);
+}
+
+.element img {
+    width: 50px;
+    height: 50px;
+}
+
+.data {
+    text-align: left;
+}
+
+.humidity-percent, .wind-percent {
+    font-size: 1.7rem;
+    font-weight: 1000; /* Extra bold */
+    color: #2d3436;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: 900;
+    color: #636e72;
+}
+
+/* Footer */
+.coptryt {
+    margin-top: 0px;
+    font-size: 0.5rem;
+    font-weight: 1000;
+    color: #636e72;
+}
+
+.coptryt span {
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .input-container input {
+        width: 75%;
+    }
+
+    .image img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .temp {
+        font-size: 2.2rem;
+    }
+
+    .location {
+        font-size: 1.6rem;
+    }
+
+    .country {
+        font-size: 1.2rem;
+    }
+
+    .cord {
+        font-size: 0.9rem;
+    }
+
+    .humidity-percent, .wind-percent {
+        font-size: 1.4rem;
+    }
+}
